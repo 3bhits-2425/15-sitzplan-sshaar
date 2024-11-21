@@ -5,9 +5,20 @@ public class AudioMenu : MonoBehaviour
 {
     [SerializeField] private AudioSource myAudioSource;
     [SerializeField] private TMP_Text Name;
+    private GameObject playPause;
     public void Awake()
     {
-        //myAudioSource = GetComponent<AudioSource>();
+        myAudioSource = GetComponent<AudioSource>();
+        playPause = GameObject.Find("PlayPause");
+        if (playPause != null)
+        {
+            Name = playPause.GetComponentInChildren<TMP_Text>();
+        }
+        else
+        {
+            Debug.LogError("nicht gefunden");
+        }
+
     }
     public void Update()
     {
@@ -25,12 +36,12 @@ public class AudioMenu : MonoBehaviour
     }
     public void PlayAudio()
     {
-        myAudioSource.Play();
+        FindAnyObjectByType<AudioManager>().Play("piano");
     }
 
     public void PauseAudio()
     {
-        myAudioSource.Pause();
+        FindAnyObjectByType<AudioManager>().Pause("piano");
     }
 
     public void PausePlay()
