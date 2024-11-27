@@ -157,10 +157,12 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 4bb92fcfd03368748b8705859be4482a, type: 3}
     volume: 15
     pitch: 0
+    audioSource: {fileID: 0}
   - name: piano2
     clip: {fileID: 8300000, guid: 4bb92fcfd03368748b8705859be4482a, type: 3}
     volume: 5
     pitch: 0.59
+    audioSource: {fileID: 0}
 --- !u!4 &351407190
 Transform:
   m_ObjectHideFlags: 0
@@ -871,7 +873,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myAudioSource: {fileID: 1929418150}
-  Name: {fileID: 0}
+  Name: {fileID: 1960715344}
 --- !u!1 &1366014477
 GameObject:
   m_ObjectHideFlags: 0
@@ -1248,7 +1250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myAudioSource: {fileID: 1929418150}
-  Name: {fileID: 0}
+  Name: {fileID: 2119670425}
 --- !u!1 &1929418149
 GameObject:
   m_ObjectHideFlags: 0

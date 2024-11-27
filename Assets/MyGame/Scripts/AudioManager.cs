@@ -18,6 +18,8 @@ public class AudioManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+        DontDestroyOnLoad(gameObject);
+
         foreach (Sound oneSound in sounds)
         {
             oneSound.audioSource = gameObject.AddComponent<AudioSource>();
@@ -25,10 +27,10 @@ public class AudioManager : MonoBehaviour
             oneSound.audioSource.volume= oneSound.volume;
             oneSound.audioSource.pitch = oneSound.pitch;
         }
-        for (int i = 0; i < sounds.Length; i++)
+        /*for (int i = 0; i < sounds.Length; i++)
         {
             Sound s = sounds[i];
-        }
+        }*/
     }
 
     private Sound findSound (string soundName)
@@ -49,7 +51,14 @@ public class AudioManager : MonoBehaviour
     }
     public void Pause(string soundName)
     {
-       findSound(soundName).audioSource.Pause();
+       //findSound(soundName).audioSource.Pause();
+       Sound mySound = findSound(soundName);
+       if (mySound == null)
+        {
+            Debug.Log("Sound " + soundName + "nicht gefunden");
+            return;
+
+        }
     }
 
 }

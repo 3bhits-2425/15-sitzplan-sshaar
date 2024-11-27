@@ -13,6 +13,7 @@ public class AudioMenu : MonoBehaviour
         if (playPause != null)
         {
             Name = playPause.GetComponentInChildren<TMP_Text>();
+            Name.text = "Play";
         }
         else
         {
