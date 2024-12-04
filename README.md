@@ -3,4 +3,4 @@
 # Diese sollen automatisch genariert werden 
 # Jeder schueler hat sein eigenes audio sein image und eigene eigenschaften 
 # die schueler werden auch automatisch generiert  
-# änderung online 
+# änderung online 2
