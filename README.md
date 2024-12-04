@@ -8,3 +8,4 @@
 =======
 # änderung online 2
 >>>>>>> c5ca9204cfe421ca3a199751a3478690062ec817
+![97c53523-73d6-4ba1-8d80-7b016214d7ab](https://github.com/user-attachments/assets/92aa1762-5977-4533-a16b-7f34a544b4d9)
