@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 269f69aeef2dccf42ac963a0a8ae58dd, type: 3}
-  m_Name: NewTableLayout
+  m_Script: {fileID: 11500000, guid: 3378de5a062444b46b9f47b82b070174, type: 3}
+  m_Name: NewStudent 3
   m_EditorClassIdentifier: 
-  row: 4
-  column: 3
-  tableSpacing: 3
-  chairSpacing: 2
+  studentName: 1
+  eyeColor: {r: 0, g: 0, b: 0, a: 0}
+  studentImage: {fileID: 0}
+  studentClip: {fileID: 0}

@@ -18,8 +18,8 @@ public class Manager : MonoBehaviour
                 Vector3 tabelPosition = new Vector3 (col* tableLayout.tableSpacing,0,row* tableLayout.tableSpacing);
                 GameObject table = Instantiate(tablePrefab, tabelPosition, Quaternion.identity, transform);
 
-                Transform possition = table.transform.Find("possition");
-                Transform possition2 = table.transform.Find("possition2");
+                Transform possition = table.transform.Find("pos1");
+                Transform possition2 = table.transform.Find("pos2");
 
                 if (possition != null)
                 { 
