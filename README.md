@@ -9,3 +9,8 @@
 
 https://github.com/user-attachments/assets/95b17394-34d9-48ff-9653-2d0c9c83ded3
 
+
+# lessons learnd
+# how to make prefabs and how to instantiate them
+# working with AudioSource and AudioClip 
+# what ScriptibalObjects are and how to work with them
