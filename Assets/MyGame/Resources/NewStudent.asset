@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   studentName: sham
   eyeColor: {r: 0.31132078, g: 0.12092602, b: 0.030544672, a: 0}
-  studentImage: {fileID: 0}
-  studentClip: {fileID: 0}
+  studentImage: {fileID: 21300000, guid: 3ecd236775dd3a844847905f9ef8bdb4, type: 3}
+  studentClip: {fileID: 8300000, guid: 4bb92fcfd03368748b8705859be4482a, type: 3}
