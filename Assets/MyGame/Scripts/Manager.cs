@@ -1,4 +1,5 @@
 
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
@@ -11,11 +12,12 @@ public class Manager : MonoBehaviour
     [SerializeField] private GameObject tablePrefab;
     [SerializeField] private GameObject chairPrefab;
     [SerializeField] private GameObject MenschPrefab;
-    [SerializeField] private Sprite[] gesichter; 
+    [SerializeField] private List<GameObject> chairlist;
 
 
     private void Start()
     {
+        chairlist = new List<GameObject>(); // wichtig sonst error 
         for (int row = 0; row < tableLayout.row; row++)
         {
             for(int col = 0; col < tableLayout.column; col++)
@@ -34,12 +36,16 @@ public class Manager : MonoBehaviour
 
                 if (possition != null)
                 { 
-                    Instantiate(chairPrefab, possition.position, possition.rotation,table.transform);
+                    GameObject chair = Instantiate(chairPrefab, possition.position, possition.rotation,table.transform);
+                    chairlist.Add(chair);
                 }
+
                 if (possition2 != null)
                 {
-                    Instantiate(chairPrefab, possition2.position, possition2.rotation, table.transform);
+                    chairlist.Add(Instantiate(chairPrefab, possition2.position, possition2.rotation, table.transform));
                 }
+
+
                 if (posMensch != null)
                 {
                     Instantiate(MenschPrefab, posMensch.position, posMensch.rotation, table.transform);
@@ -48,11 +54,7 @@ public class Manager : MonoBehaviour
                 {
                     Instantiate(MenschPrefab, posMensch2.position, posMensch2.rotation, table.transform);
                 }
-
-                for (int i = 0; i < gesichter.Length; i++)
-                {
-
-                }
+               
 
             }
     
