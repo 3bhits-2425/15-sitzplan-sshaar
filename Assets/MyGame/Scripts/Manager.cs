@@ -5,19 +5,20 @@ using UnityEngine.UI;
 using UnityEngine.UIElements;
 
 
+
 public class Manager : MonoBehaviour
 {
     [SerializeField] private TableLayoutData tableLayout;
     [SerializeField] private StudentData[] students;
     [SerializeField] private GameObject tablePrefab;
     [SerializeField] private GameObject chairPrefab;
-    [SerializeField] private GameObject MenschPrefab;
+    [SerializeField] private GameObject menschPrefab;
     [SerializeField] private List<GameObject> chairlist;
 
 
     private void Start()
     {
-        chairlist = new List<GameObject>(); // wichtig sonst error 
+        chairlist = new List<GameObject>();
         for (int row = 0; row < tableLayout.row; row++)
         {
             for(int col = 0; col < tableLayout.column; col++)
@@ -28,11 +29,7 @@ public class Manager : MonoBehaviour
 
                 Transform possition = table.transform.Find("pos1");
                 Transform possition2 = table.transform.Find("pos2");
-                Transform posMensch = table.transform.Find("Mensch");
-                Transform posMensch2 = table.transform.Find("Mensch2");
-
-
-
+                
 
                 if (possition != null)
                 { 
@@ -45,16 +42,20 @@ public class Manager : MonoBehaviour
                     chairlist.Add(Instantiate(chairPrefab, possition2.position, possition2.rotation, table.transform));
                 }
 
-
-                if (posMensch != null)
+                for(int i = 0; i < chairlist.Count; i++)
                 {
-                    Instantiate(MenschPrefab, posMensch.position, posMensch.rotation, table.transform);
-                }
-                if (posMensch2 != null)
-                {
-                    Instantiate(MenschPrefab, posMensch2.position, posMensch2.rotation, table.transform);
-                }
-               
+                    Transform posMensch = chairlist[i].transform.Find("Mensch");
+                    if (posMensch != null)
+                    {
+                        GameObject mensch= Instantiate(menschPrefab, posMensch.position, posMensch.rotation, chairlist[i].transform);
+                        for (int j = 0; j < students.Length; j++)
+                        {
+                            Sprite image = 
+                            image = students[j].studentImage;
+                            
+                        }
+                    }
+                }               
 
             }
     
